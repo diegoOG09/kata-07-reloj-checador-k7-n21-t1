@@ -1,0 +1,24 @@
+{
+  "application.js": "/packs/js/application-3dd0dc24d9c39bc09227.js",
+  "application.js.map": "/packs/js/application-3dd0dc24d9c39bc09227.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-3dd0dc24d9c39bc09227.js"
+      ],
+      "js.map": [
+        "/packs/js/application-3dd0dc24d9c39bc09227.js.map"
+      ]
+    },
+    "timer-script": {
+      "js": [
+        "/packs/js/timer-script-3f3cf9bcff746dfcf7db.js"
+      ],
+      "js.map": [
+        "/packs/js/timer-script-3f3cf9bcff746dfcf7db.js.map"
+      ]
+    }
+  },
+  "timer-script.js": "/packs/js/timer-script-3f3cf9bcff746dfcf7db.js",
+  "timer-script.js.map": "/packs/js/timer-script-3f3cf9bcff746dfcf7db.js.map"
+}
