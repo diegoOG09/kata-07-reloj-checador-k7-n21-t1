@@ -266,3 +266,259 @@ Processing by IndexController#index as HTML
 Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7062)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:34:14 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.3ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 8919)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 10874)
+Completed 200 OK in 42ms (Views: 19.7ms | ActiveRecord: 0.8ms | Allocations: 25588)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:34:16 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 703)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 6242)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7834)
+Completed 200 OK in 24ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 13927)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:34:21 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3154)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4604)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 7007)
+
+
+Started GET "/pages/employees" for 127.0.0.1 at 2022-01-20 20:34:28 -0600
+Processing by PagesController#employees as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 413)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:34:28 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1878)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3346)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4096)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:36:15 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3131)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4595)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 6943)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:36:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1734)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3201)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 3871)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:36:26 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diegoadmin@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 37ms (ActiveRecord: 0.2ms | Allocations: 3893)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1950)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3419)
+Completed 200 OK in 288ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 5327)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:36:34 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diegoadmin@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.1ms | Allocations: 1533)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1720)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3172)
+Completed 200 OK in 250ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3818)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:37:15 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diegoadmin@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms | Allocations: 1321)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1720)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3161)
+Completed 200 OK in 252ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3790)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:37:19 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1732)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3182)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3851)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:37:31 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diegoadmin@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms | Allocations: 1321)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diegoadmin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1724)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3178)
+Completed 200 OK in 291ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 3807)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:37:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.0ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 3195)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 3867)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:38:08 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diego2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diego2@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.3ms | Allocations: 1322)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diego2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3170)
+Completed 200 OK in 289ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3801)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-01-20 20:38:12 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 237)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 157)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2842)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4341)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 5898)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-01-20 20:38:22 -0600
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diego2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "diego2@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "diego2@gmail.com"], ["encrypted_password", "$2a$12$7aw6GsMn6QQtjdQp8oAkrO9O9A0M2YGVHrM7CnPXONjT9uovojhPe"], ["created_at", "2022-01-21 02:38:22.403760"], ["updated_at", "2022-01-21 02:38:22.403760"]]
+  [1m[36mTRANSACTION (102.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages/employees
+Completed 302 Found in 405ms (ActiveRecord: 103.2ms | Allocations: 9532)
+
+
+Started GET "/pages/employees" for 127.0.0.1 at 2022-01-20 20:38:22 -0600
+Processing by PagesController#employees as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/employees.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/pages/employees.html.erb:32
+  Rendered pages/employees.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3578)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 6117)
+
+
+Started GET "/pages/employees/new" for 127.0.0.1 at 2022-01-20 20:38:28 -0600
+Processing by PagesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/new.html.erb within layouts/application
+  Rendered pages/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3282)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4734)
+Completed 200 OK in 22ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 10131)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:38:30 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 164)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1782)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3250)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 3893)
+
+
+Started GET "/pages/employees" for 127.0.0.1 at 2022-01-20 20:38:32 -0600
+Processing by PagesController#employees as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/employees.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/pages/employees.html.erb:32
+  Rendered pages/employees.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1240)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2692)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 4112)
+
+
+Started GET "/pages/branches" for 127.0.0.1 at 2022-01-20 20:38:37 -0600
+Processing by PagesController#branches as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/branches.html.erb within layouts/application
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT "branches".* FROM "branches"[0m
+  ↳ app/views/pages/branches.html.erb:26
+  Rendered pages/branches.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1886)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3364)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5940)
+
+
