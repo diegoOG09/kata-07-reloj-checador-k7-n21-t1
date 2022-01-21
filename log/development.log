@@ -522,3 +522,139 @@ Processing by PagesController#branches as HTML
 Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 5940)
 
 
+Started GET "/pages/branches" for 127.0.0.1 at 2022-01-20 20:42:17 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#branches as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/branches.html.erb within layouts/application
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT "branches".* FROM "branches"[0m
+  ↳ app/views/pages/branches.html.erb:26
+  Rendered pages/branches.html.erb within layouts/application (Duration: 13.7ms | Allocations: 7362)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 9354)
+Completed 200 OK in 41ms (Views: 20.2ms | ActiveRecord: 0.9ms | Allocations: 22304)
+
+
+Started GET "/pages/branches" for 127.0.0.1 at 2022-01-20 20:42:19 -0600
+Processing by PagesController#branches as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/branches.html.erb within layouts/application
+  [1m[36mBranch Load (0.2ms)[0m  [1m[34mSELECT "branches".* FROM "branches"[0m
+  ↳ app/views/pages/branches.html.erb:26
+  Rendered pages/branches.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2844)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 4526)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:42:23 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/index/index.html.erb:12
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4717)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6202)
+Completed 200 OK in 39ms (Views: 23.5ms | ActiveRecord: 0.7ms | Allocations: 16073)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:42:33 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.2ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3200)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4651)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 6887)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:42:34 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 704)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 6205)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 7788)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 10011)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:42:35 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.2ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3158)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4617)
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 7024)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:42:37 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1754)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3206)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3904)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-01-20 20:42:46 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"diego2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "diego2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 267ms (ActiveRecord: 0.2ms | Allocations: 6679)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 20:42:46 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/index/index.html.erb:12
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4044)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5532)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 7954)
+
+
+Started GET "/pages/employees" for 127.0.0.1 at 2022-01-20 20:42:54 -0600
+Processing by PagesController#employees as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/employees.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/pages/employees.html.erb:32
+  Rendered pages/employees.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1766)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3216)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 4911)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCheck Load (0.2ms)[0m  [1m[34mSELECT "checks".* FROM "checks"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCheck Load (0.3ms)[0m  [1m[34mSELECT "checks".* FROM "checks"[0m
+Started GET "/pages/employees" for 127.0.0.1 at 2022-01-20 20:46:35 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#employees as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/employees.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/pages/employees.html.erb:32
+  Rendered pages/employees.html.erb within layouts/application (Duration: 10.9ms | Allocations: 7384)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 9376)
+Completed 200 OK in 40ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 22801)
+
+
