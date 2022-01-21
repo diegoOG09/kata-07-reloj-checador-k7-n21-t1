@@ -35,9 +35,8 @@ db/*.sqlite3-*
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
+public/packs
+public/packs-test
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
