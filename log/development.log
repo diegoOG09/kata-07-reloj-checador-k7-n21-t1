@@ -209,3 +209,60 @@ Processing by IndexController#index as HTML
 Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 7063)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-20 19:56:50 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 8972)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 10926)
+Completed 200 OK in 58ms (Views: 20.4ms | ActiveRecord: 0.6ms | Allocations: 25683)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 19:56:52 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 703)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 6228)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 7804)
+Completed 200 OK in 23ms (Views: 14.1ms | ActiveRecord: 0.6ms | Allocations: 13905)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-01-20 19:56:54 -0600
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 237)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2854)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4355)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 5929)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-01-20 19:56:56 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1734)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3186)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3961)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-20 19:56:57 -0600
+Processing by IndexController#index as HTML
+  [1m[36mCheck Load (0.1ms)[0m  [1m[34mSELECT "checks".* FROM "checks" WHERE "checks"."out" IS NULL AND "checks"."employee_id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered index/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3131)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4580)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7062)
+
+
